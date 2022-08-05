@@ -1,20 +1,17 @@
 #include <iostream>
 #include <string>
-#include <stdlib.h>
+#include <ostream>
 using namespace std;
 
 void print_binary_str(std::string decimal_number)
 {
-int num = stoi(decimal_number);
-if(num < 1)
-{
-cout << "number should not less than 1 " << endl;
-exit(0);
+int result = 0, j = 1;
+int n = stoi(decimal_number);
+int temp = n;
+while(temp){
+    result = result + j * (temp %2);
+    temp = temp / 2;
+    j = j * 10;
 }
-for(int i=31; i>=0 ; i--)
-{
-cout << ((num >> i) & 1) ;
-}
-cout << endl;
-
+  printf("%d\n", result);
 }
