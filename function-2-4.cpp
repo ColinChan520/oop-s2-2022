@@ -13,7 +13,6 @@ if(max < integers[i])
 max = integers[i];
 }
 }
-cout << max << " + ";
 return max;
 }
 
@@ -28,7 +27,6 @@ if(min > integers[i])
 min = integers[i];
 }
 }
-cout << min << " = ";
 return min;
 }
 
