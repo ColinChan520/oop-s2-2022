@@ -1,9 +1,5 @@
 #include <iostream>
-#include<iomanip>
-#include<fstream>
-#include <stdint.h>
-#include <string>
-#include <cmath>
+#include <ostream>
 #include "function-1-3.cpp"
 using namespace std;
 

@@ -1,43 +1,59 @@
 #include <iostream>
-#include<iomanip>
-#include<fstream>
-#include <stdint.h>
-#include <string>
-#include <cmath>
+#include <ostream>
 using namespace std;
 
-void count_digits(int array[4][4])
-{
-    int one = 0, two = 0, three = 0, four = 0, five = 0, six = 0, seven = 0, eight = 0, nine = 0, zero = 0;
-    for (int i = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            if (array[i][j] == 0)
-                zero++;
-            if (array[i][j] == 1)
-                one++;
-            if (array[i][j] == 2)
-                two++;
-            if (array[i][j] == 3)
-                three++;
-            if (array[i][j] == 4)
-                four++;
-            if (array[i][j] == 5)
-                five++;
-            if (array[i][j] == 6)
-                six++;
-            if (array[i][j] == 7)
-                seven++;
-            if (array[i][j] == 8)
-                eight++;
-            if (array[i][j] == 9)
-                nine++;
-        }
+void count_digits(int array[4][4]) {
+  int num_0 = 0;
+  int num_1 = 0;
+  int num_2 = 0;
+  int num_3 = 0;
+  int num_4 = 0;
+  int num_5 = 0;
+  int num_6 = 0;
+  int num_7 = 0;
+  int num_8 = 0;
+  int num_9 = 0;
+  
+
+  for (int r = 0; r < 4; r++) {
+    for (int c = 0; c < 4; c++) {
+      switch (array[r][c]) {
+        case 0:
+          num_0++;
+          break;
+        case 1:
+          num_1++;
+          break;
+        case 2:
+          num_2++;
+          break;
+        case 3:
+          num_3++;
+          break;
+        case 4:
+          num_4++;
+          break;
+        case 5:
+          num_5++;
+          break;
+        case 6:
+          num_6++;
+        case 7:
+          num_7++;
+          break;
+        case 8:
+          num_8++;
+          break;
+        case 9:
+          num_9++;
+          break;
+          break;
+        default:
+          break;
+      }
     }
-
-    cout << "0:" << zero << ";" << "1:" << one << ";" << "2:" << two << ";" << "3:" << three << ";" << "4:" << four << ";" << "5:" << five << ";" "6:" << six << ";" << "7:" << seven << ";"
-        << "8:" << eight << ";" << "9:" << nine << ";";
-
+  }
+  printf("0:%d;1:%d;2:%d;3:%d;4:%d;5:%d;6:%d;7:%d;8:%d;9:%d;\n", num_0, num_1,
+         num_2, num_3, num_4, num_5, num_6, num_7, num_8, num_9);
 }
 
