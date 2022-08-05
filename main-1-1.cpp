@@ -5,7 +5,7 @@
 
 //include the file in which function is written
 
-#include "function-1-1.cpp"
+
 
 //Declare the function prototype.
 
